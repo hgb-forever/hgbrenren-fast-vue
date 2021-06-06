@@ -64,7 +64,7 @@
         width="150"
         label="操作">
         <template slot-scope="scope">
-          <el-button v-if="isAuth('sys:role:update')" type="text" size="small" @click="addOrUpdateHandle(scope.row.articleId)">修改</el-button>
+          <el-button v-if="isAuth('sys:role:update')" type="text" size="small" @click="addOrUpdateHandle(scope.row)">修改</el-button>
           <el-button v-if="isAuth('sys:role:delete')" type="text" size="small" @click="deleteHandle(scope.row.articleId)">删除</el-button>
         </template>
       </el-table-column>
@@ -154,10 +154,10 @@
         this.dataListSelections = val
       },
       // 新增 / 修改
-      addOrUpdateHandle (articleId) {
+      addOrUpdateHandle (item) {
         this.addOrUpdateVisible = true
         this.$nextTick(() => {
-          this.$refs.addOrUpdate.init(articleId)
+          this.$refs.addOrUpdate.init(item)
         })
       },
       // 删除

@@ -2,27 +2,23 @@
   <div class="mod-home">
     <h3>项目介绍</h3>
     <ul>
-      <li>renren-fast-vue基于vue、element-ui构建开发，实现<a href="https://gitee.com/renrenio/renren-fast" target="_blank">renren-fast</a>后台管理前端功能，提供一套更优的前端解决方案</li>
-      <li>前后端分离，通过token进行数据交互，可独立部署</li>
-      <li>主题定制，通过scss变量统一一站式定制</li>
-      <li>动态菜单，通过菜单管理统一管理访问路由</li>
-      <li>数据切换，通过mock配置对接口数据／mock模拟数据进行切换</li>
-      <li>发布时，可动态配置CDN静态资源／切换新旧版本</li>
-      <li>演示地址：<a href="http://demo.open.renren.io/renren-fast" target="_blank">http://demo.open.renren.io/renren-fast</a> (账号密码：admin/admin)</li>
+      <li>人工查找方法对于庞大信息的处理效率过低，通过人工查找方法解决网络上庞大的数据量是不现实的。</li>
+      <li>通过人工查找的方法不仅价格昂贵而且效率低下，在大数据时代的初期，有“数据庞大，知识短缺”的特点，信息的获取并不等同于知识的获取。</li>
+      <li>进入大数据时代，信息以指数趋势增长，因此如何从信息中发现知识显得尤为重要，并逐渐成为IT行业关注的重点。</li>
+      <li>本项目利用Python语言使用简洁、资源丰富的特点，爬取网络上的大量数据，准确地提取网页中的主体信息， 并能够精准对提取的信息进行分析。</li>
+      <li>数据资源通常存在于多个网站中，利用爬虫对多个数据来源进行抓取，可以快速地获取网络资源中的信息。</li>
+      <li>目标数据可以选择数据量大但是有相同数据特征的数据，以及定时更新的数据</li>
+      <li>抽取式文本摘要提取技术是从大量的、复杂的文本信息中，提取出文本信息的主要内容，从而解决人工提取摘要的成本和效率问题。</li>
     </ul>
     <h3>获取帮助</h3>
     <ul>
-      <li>官方社区：<a href="https://www.renren.io/community" target="_blank">https://www.renren.io/community</a></li>
-      <li>前端Git地址：<a href="https://github.com/renrenio/renren-fast-vue" target="_blank">https://github.com/renrenio/renren-fast-vue</a></li>
-      <li>后台Git地址：<a href="https://gitee.com/renrenio/renren-fast" target="_blank">https://gitee.com/renrenio/renren-fast</a></li>
-      <li>代码生成器：<a href="https://gitee.com/renrenio/renren-generator" target="_blank">https://gitee.com/renrenio/renren-generator</a></li>
-      <li>如需关注项目最新动态，请Watch、Star项目，同时也是对项目最好的支持</li>
+      <li>系统用户分为普通用户和管理员用户，普通用户允许在App中进行登录注册，用户验证通过后用户可以在App中查看其它用户的信息、动态，与其它用户聊天以及回复其它用户等基本的论坛功能。</li>
+      <li>本项目以Vue.js和SpringBoot作为开发框架，利用Axios来完成和后端的交互，基于Uni-app将WebApp项目打包成一个手机App应用，并完成一套代码实现多端的效果，打造一个运行流畅的论坛App。</li>
+      <li>根据用户输入关键字利用Python生成相关文章，减少用户搜索时间。App程序获取到用户输入的内容，通过Axious发送请求到后端接口，后端接收到请求信息，调用Python程序执行并获取到Python程序的返回结果</li>
+      <li>本项目普通用户页面使用HBuilder x工具来编写，配合Uni-app前端框架，可以实现一套代码，多端运行的效果，可以大幅度提高前端开发的效率。</li>
+      <li>后端使用了IntelliJ IDEA做Java开发，使用SpringBoot框架作为容器统筹管理其他后端框架。</li>
     </ul>
-    <h3>官方QQ群</h3>
-    <ul>
-      <li>高级群：324780204(大牛云集，跟大牛学习新技能)</li>
-      <li>普通群：145799952(学习交流，互相解答各种疑问)</li>
-    </ul>
+    
   </div>
 </template>
 

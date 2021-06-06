@@ -5,10 +5,10 @@
     :visible.sync="visible">
     <el-form :model="dataList" :rules="dataRule" ref="dataForm"  label-width="80px">
       <el-form-item label="文章标题" prop="articleTitle" :class="{ 'is-required': !dataForm.id }">
-        <el-input v-model="dataList.articleTitle" placeholder="文章题目" maxlength="30" type="text" show-word-limit></el-input>
+        <el-input v-model="dataList.articleTitle" :value="dataList.articleTitle" placeholder="文章题目" maxlength="30" type="text" show-word-limit></el-input>
       </el-form-item>
       <el-form-item label="文章内容" prop="articleContent" :class="{ 'is-required': !dataForm.id }">
-        <el-input v-model="dataList.articleContent" type="textarea" placeholder="文章内容" rows=20></el-input>
+        <el-input v-model="dataList.articleContent" :value="dataList.articleContent" type="textarea" placeholder="文章内容" rows=20></el-input>
       </el-form-item>
       
      
@@ -29,7 +29,9 @@
         visible: false,
         dataList: {},
         dataForm: {
-          id: 0
+          id: 0,
+          articleTitle: '',
+          articleContent: ''
         },
         dataRule: {
           articleTitle: [
@@ -42,7 +44,13 @@
       }
     },
     methods: {
-      init (articleId) {
+      init (item) {
+        console.log('$$$$$$')
+        console.log(item)
+        let articleId = String(item.articleId)
+        this.dataList.articleTitle = item.articleTitle
+        this.dataList.articleContent = item.articleContent
+        console.log(this.dataList)
         console.log('是否新增' + (!this.dataForm.id))
         console.log('articleId=' + articleId)
         this.dataForm.id = articleId || 0
@@ -71,8 +79,7 @@
               url: this.$http.adornUrl(`/article/${!this.dataForm.id ? 'add' : 'updateArticle'}`),
               method: 'post',
               data: this.$http.adornData({
-                'userId': 1,
-                'articleId': this.dataList.articleId,
+                'articleId': this.dataForm.id,
                 'articleTitle': this.dataList.articleTitle,
                 'articleContent': this.dataList.articleContent
               }, false)
